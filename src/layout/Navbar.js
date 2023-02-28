@@ -5,8 +5,8 @@ import { IoIosListBox } from "react-icons/io";
 
 const Navbar = () => {
   return (
-    <nav className='h-14 bg-indigo-200 rounded-full m-2 max-w-7xl mx-auto px-5'>
-      <ul className='h-full  mx-auto flex justify-between items-center gap-3 font-semibold text-indigo-900'>
+    <nav className='px-5 m-2 mx-auto bg-indigo-200 rounded-full h-14 max-w-7xl'>
+      <ul className='flex items-center justify-between h-full gap-3 mx-auto font-semibold text-indigo-900'>
         <h1 className='flex-1'>Moon Tech</h1>
         <li>
           <Link to='/'>Home</Link>
@@ -17,16 +17,16 @@ const Navbar = () => {
         <li>
           <Link to='/about'>About</Link>
         </li>
-        <li title='Wishlist' className='bg-indigo-500 p-2 rounded-full'>
+        <li title='Wishlist' className='p-2 bg-indigo-500 rounded-full'>
           <Link to='/'>
             <IoIosListBox className='text-white' />
           </Link>
         </li>
-        <li title='cart' className='bg-indigo-500 p-2 rounded-full'>
-          <Link to='/cart'>
-            <BsFillCartFill className='text-white ' />
-          </Link>
-        </li>
+        <Link to='/cart'>
+          <li title='cart' className='p-2 bg-indigo-500 rounded-full'>
+              <BsFillCartFill className='text-white ' />
+          </li>
+        </Link>
       </ul>
     </nav>
   );
